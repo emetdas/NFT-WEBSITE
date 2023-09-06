@@ -4,7 +4,7 @@
 
 ## Watch On Youtube 🎬
 
-### [⏯ Part - 1](https://youtu.be/3ncvlaI9PjQ)
+### [⏯ Part - 1](https://youtu.be/7D_YPxa6Bvw)
 
 ![thumbnail](thumbnail.png)
 
