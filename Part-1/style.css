@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #885af3;
+  --text-dark: #0f051d;
+  --text-light: #7b7583;
+  --white: #fff;
+  --gradient: linear-gradient(7deg, #2600fc 0%, #ff00ea 100%);
+  --border: rgba(131, 131, 131, 0.267);
+  --gr-bg: #872bff;
+  --input-bg: rgba(0, 0, 0, 0.05);
+  --back-to-top: #e6e6ff;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 1rem;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.heading {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.text-secondary {
+  font-size: 1.7rem;
+  color: var(--text-light);
+}
+
+.secondary {
+  color: var(--text-light);
+}
+
+.btn-primary {
+  display: inline-flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--gradient);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 0.15rem solid var(--gr-bg);
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.btn-primary:hover {
+  background: var(--white);
+  color: var(--gr-bg);
+  border: 0.15rem solid var(--gr-bg);
+}
+
+.btn-primary ion-icon,
+.btn-secondary ion-icon {
+  font-size: 2rem;
+  transform: rotate(45deg);
+}
+
+.btn-secondary {
+  color: var(--text-dark);
+  display: inline-flex;
+  gap: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 0;
+  border-bottom: 0.15rem solid var(--text-light);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gr {
+  color: var(--gr-bg);
+}
+
+#home {
+  background: url('images/hero-bg.png') no-repeat center/cover;
+}
+
+.navigation {
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  width: 10rem;
+}
+
+.nav_list {
+  display: inline-flex;
+  margin: 0 1rem;
+}
+
+.nav_link {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.action_link {
+  display: inline-flex;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.action_link ion-icon {
+  font-size: 2rem;
+}
+
+.home-container {
+  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.home-image img {
+  width: 100%;
+}
+
+.home-content .text-secondary {
+  margin: 3rem 0;
+}
+
+.status {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.members {
+  display: inline-flex;
+  margin-left: 2rem;
+}
+
+.member {
+  margin-left: -2rem;
+}
+
+.member img {
+  width: 4rem;
+}
+
+.status-info .secondary {
+  font-size: 1.4rem;
+}
+
+.nav_toggle {
+  display: none;
+}
+
+.partners {
+  padding: 10rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+.partner {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  /* Navigation CSS */
+  .nav_toggle {
+    display: inline-flex;
+  }
+  .nav_toggle ion-icon {
+    font-size: 2.3rem;
+  }
+  .nav_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+    transition: width 0.5s ease;
+  }
+  .nav_list {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.7rem;
+    border-bottom: 0.1rem solid var(--text-light);
+  }
+  .active_menu {
+    width: 30rem;
+  }
+}
