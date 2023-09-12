@@ -8,6 +8,8 @@
 
 ### [⏯ Part - 2](https://youtu.be/Bi0F5D27Y6I)
 
+### [⏯ Part - 3](https://youtu.be/3sR3zwOgbfo)
+
 ![thumbnail](thumbnail.png)
 
 ---
