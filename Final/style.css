@@ -420,6 +420,150 @@ form {
   padding: 0 0.5rem;
 }
 
+#faq {
+  padding: 5rem 0;
+}
+
+.faq {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 0.15rem solid var(--border);
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 0.15rem solid var(--border);
+  cursor: pointer;
+}
+
+.faq-list:last-child .faq-header {
+  border-bottom: 0.15rem solid var(--white);
+}
+
+.faq-header ion-icon {
+  transition: transform 0.5s ease-in-out;
+}
+
+.faq-header.active ion-icon {
+  transform: rotate(180deg);
+}
+
+.faq-content {
+  height: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  color: var(--text-light);
+  transition: all 0.5s cubic-bezier(0.55, 0.09, 0.53, 0.48);
+}
+
+.faq-content p {
+  padding: 1rem 0;
+}
+
+.faq-content.active {
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#cta {
+  padding: 10rem 0;
+  background: url('images/cta-bg.png');
+}
+
+.cta-container .btn-primary {
+  margin-top: 2rem;
+}
+
+#footer {
+  padding: 5rem 0 3rem 0;
+  border-top: 0.15rem solid var(--border);
+}
+
+.footer-contianer {
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5rem;
+}
+
+.footer-item:first-child {
+  grid-column: span 2;
+}
+
+.footer-item p {
+  padding: 1.5rem 0;
+}
+
+.footer-menu li {
+  padding: 1rem 0;
+}
+
+.footer-menu li a {
+  color: var(--text-light);
+}
+
+.social ion-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+footer ul {
+  display: flex;
+  gap: 2rem;
+}
+
+footer ul li a {
+  color: var(--text-light);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background: var(--back-to-top);
+  box-shadow: 0 0 0.2rem var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transform: translateY(-30rem);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.back-to-top ion-icon {
+  font-size: 3rem;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+  transform: translateY(0rem);
+}
+
+@media (max-width: 1145px) {
+  .why-item:nth-child(even) {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 800px) {
   /* Navigation CSS */
   .nav_toggle {
@@ -452,5 +596,46 @@ form {
   }
   .active_menu {
     width: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-contianer {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+  }
+  .footer-item:first-child {
+    grid-column: span 1;
+  }
+  .nft-image img {
+    height: 40rem;
+    object-fit: contain;
+  }
+  .form-container input {
+    width: 100%;
+  }
+  .form-container button {
+    margin-top: 2rem;
+  }
+  .artist:nth-child(odd) {
+    margin-top: 0;
+  }
+  footer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-img {
+    width: 7.5rem;
+  }
+  .home-container {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  .heading {
+    font-size: 3.5rem;
+  }
+  .work-prosess-details .prosess-title {
+    font-size: 3.5rem;
   }
 }

@@ -59,3 +59,28 @@ counters.forEach((counter, index) => {
   UpdateCounter();
 });
 // Counter
+// FAQ
+let faq_list_header = document.querySelectorAll('.faq-list .faq-header');
+faq_list_header.forEach((list) => {
+  list.addEventListener('click', () => {
+    list.classList.toggle('active');
+    list.nextElementSibling.classList.toggle('active');
+  });
+});
+// FAQ
+let back_to_top = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 100) {
+    back_to_top.classList.add('show');
+  } else {
+    back_to_top.classList.remove('show');
+  }
+});
+back_to_top.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+});
